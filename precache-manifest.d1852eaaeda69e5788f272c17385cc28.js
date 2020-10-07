@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d5c3545dc57984870800a38ae2c0452",
+    "revision": "405278f4606fbb25b78b4095fa9a82a4",
     "url": "./index.html"
   },
   {
-    "revision": "f2afc6b39d3d2e25b790",
+    "revision": "059d8fa6b8468911393d",
     "url": "./static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "18585e02c0793fe1ad89",
-    "url": "./static/css/main.32b33804.chunk.css"
+    "revision": "5849ef96aafbbf1c7866",
+    "url": "./static/css/main.7d23a16c.chunk.css"
   },
   {
-    "revision": "f2afc6b39d3d2e25b790",
-    "url": "./static/js/2.c88093c7.chunk.js"
+    "revision": "059d8fa6b8468911393d",
+    "url": "./static/js/2.11bab567.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.c88093c7.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.11bab567.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "18585e02c0793fe1ad89",
-    "url": "./static/js/main.aefb2363.chunk.js"
+    "revision": "5849ef96aafbbf1c7866",
+    "url": "./static/js/main.0e65d8a7.chunk.js"
   },
   {
     "revision": "610a38b7b5a7cb7b2d5e",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8054d824d788e82f864c7be3e2931daf",
     "url": "./static/media/brickbreaker.8054d824.png"
+  },
+  {
+    "revision": "a5afe93aa2ede7e06986f359933c6cee",
+    "url": "./static/media/burning-earth.a5afe93a.jpg"
   },
   {
     "revision": "495f51bb7c11706cb78b8c0de9ffb99e",
