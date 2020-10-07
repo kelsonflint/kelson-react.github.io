@@ -12,7 +12,7 @@ export default class ProjectList extends React.Component {
                     
                     <Project 
                         title="Glimpse iOS App" 
-                        description="another project" 
+                        description="Startup app funded by Amazon Catalyst" 
                         image={require("../img/glimpse.png")}
                         detailed="/glimpse"
                         website="https://www.glimpsewearables.com/"  
@@ -26,6 +26,8 @@ export default class ProjectList extends React.Component {
                     />
                     
                 </div>
+
+                <h1 id="project-header">Hot Stuff</h1>
                 <div className="project-row">
                     <Project
                         title="Climate Analysis Shiny App"
@@ -41,6 +43,8 @@ export default class ProjectList extends React.Component {
                         git="https://github.com/kelsonflint/tinderbot"
                     />
                 </div>
+
+                <h1 id="project-header">Some Extras</h1>
                 <div id="games" className="project-row">
                     <Project 
                         title="Sudoku Solver" 

@@ -1,14 +1,12 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./navbar";
 import Nav from "./nav";
-import Bricks from "./pages/bricks";
 import Glimpse from "./pages/glimpse";
 import '../style/App.css';
 
@@ -25,19 +23,19 @@ function App() {
           <Nav />
           <Glimpse />
         </Route>
-        <Route path="/bricks">
-          <Nav />
-          <Bricks />
+        <Route path="/about">
+          <div className="App">
+            <header className="App-header">
+              <Navbar />
+            </header>
+          </div>
         </Route>
         <Route path="/">
-        <div className="App">
-          <head>
-            <title>Kelson Flint</title>
-          </head>
-          <header className="App-header">
-            <Navbar />
-          </header>
-        </div>
+          <div className="App">
+            <header className="App-header">
+              <Navbar />
+            </header>
+          </div>
         </Route>
       </Switch>
     </Router>
