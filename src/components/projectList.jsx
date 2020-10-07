@@ -1,11 +1,12 @@
 import React from "react";
 import Project from "./project";
+import { Parallax } from "react-parallax";
 
 export default class ProjectList extends React.Component {
 
     render() {
         return (
-            <div id="projects">
+            <div >
                 <h1 id="project-header">My Projects</h1>
                 
                 <div className="project-row">
@@ -26,23 +27,26 @@ export default class ProjectList extends React.Component {
                     />
                     
                 </div>
-
-                <h1 id="project-header">Hot Stuff</h1>
-                <div className="project-row">
-                    <Project
-                        title="Climate Analysis Shiny App"
-                        description="An interactive data analysis of the effects of greenhouse gases on global climate change." 
-                        image={require("../img/shiny.png")}
-                        big={true}
-                        website="https://swierj.shinyapps.io/final-kelsonflint/"
-                    />
-                    <Project
-                        title="Tinder Bot"
-                        description="Infinite swipes using Python and Selenium"
-                        image={require("../img/tinder.png")}
-                        git="https://github.com/kelsonflint/tinderbot"
-                    />
-                </div>
+                <Parallax bgImage={require("../img/burning-earth.jpg")} strength={500}>
+                    <h1 id="project-header">Hot Stuff</h1>
+                    <div  className="project-row">
+                        <Project
+                            id="hot"
+                            title="Climate Analysis Shiny App"
+                            description="An interactive data analysis of the effects of greenhouse gases on global climate change." 
+                            image={require("../img/shiny.png")}
+                            big={true}
+                            website="https://swierj.shinyapps.io/final-kelsonflint/"
+                        />
+                        <Project
+                            id="hot"
+                            title="Tinder Bot"
+                            description="Infinite swipes using Python and Selenium"
+                            image={require("../img/tinder.png")}
+                            git="https://github.com/kelsonflint/tinderbot"
+                        />
+                    </div>
+                </Parallax>
 
                 <h1 id="project-header">Some Extras</h1>
                 <div id="games" className="project-row">

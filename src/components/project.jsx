@@ -1,8 +1,5 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +24,7 @@ export default class Project extends React.Component {
                 {   !this.props.big ? 
                     <div class="col-md-4">
                         <div class="card text-white bg-dark mb-2">
-                            <img class="card-img-top" src={this.props.image}/>
+                            <img class="card-img-top" src={this.props.image} alt="project image"/>
                             <div class="card-body">
                                 <h5 id="card-title" class="card-title">{this.props.title}</h5>
                                 <p id="card-description" class="card-text">{this.props.description}</p>
@@ -40,7 +37,7 @@ export default class Project extends React.Component {
                         </div>
                     </div> :
                     <div class="card text-white bg-dark mb-3">
-                        <img class="card-img-top" src={this.props.image} />
+                        <img class="card-img-top" src={this.props.image}  alt="project image"/>
                         <div class="card-body">
                         <h5 id="card-title" class="card-title">{this.props.title}</h5>
                         <p id="card-description" class="card-text">{this.props.description}</p>

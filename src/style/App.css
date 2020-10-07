@@ -70,12 +70,20 @@
 #bricks {
   background: white;
 }
+#burning {
+  background-image: url("../img/burning-earth.jpg");
+  width: 100%;
+}
 #project-header {
   font-family: 'Orbitron', sans-serif;
   color: white;
   font-size: 50px;
   text-align: center;
   padding: 15px;
+}
+
+#hot {
+  padding: 20px;
 }
 
 #big-card {
