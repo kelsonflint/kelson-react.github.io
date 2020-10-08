@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.e10cd5b8.chunk.css",
-    "main.js": "./static/js/main.833df155.chunk.js",
-    "main.js.map": "./static/js/main.833df155.chunk.js.map",
+    "main.css": "./static/css/main.0e5a73f6.chunk.css",
+    "main.js": "./static/js/main.b7edab1c.chunk.js",
+    "main.js.map": "./static/js/main.b7edab1c.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.916853f0.js",
     "runtime-main.js.map": "./static/js/runtime-main.916853f0.js.map",
     "static/css/2.11829350.chunk.css": "./static/css/2.11829350.chunk.css",
     "static/js/2.11bab567.chunk.js": "./static/js/2.11bab567.chunk.js",
     "static/js/2.11bab567.chunk.js.map": "./static/js/2.11bab567.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.351d9e44f888f879e8b0c85b5a3bf0e4.js": "./precache-manifest.351d9e44f888f879e8b0c85b5a3bf0e4.js",
+    "precache-manifest.07adb3996f78e08d2c0de4d955786218.js": "./precache-manifest.07adb3996f78e08d2c0de4d955786218.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.11829350.chunk.css.map": "./static/css/2.11829350.chunk.css.map",
-    "static/css/main.e10cd5b8.chunk.css.map": "./static/css/main.e10cd5b8.chunk.css.map",
+    "static/css/main.0e5a73f6.chunk.css.map": "./static/css/main.0e5a73f6.chunk.css.map",
     "static/js/2.11bab567.chunk.js.LICENSE.txt": "./static/js/2.11bab567.chunk.js.LICENSE.txt",
     "static/media/brickbreaker.png": "./static/media/brickbreaker.8054d824.png",
     "static/media/App.css": "./static/media/burning-earth.a5afe93a.jpg",
@@ -21,7 +21,6 @@
     "static/media/project1.png": "./static/media/project1.c813712d.png",
     "static/media/shiny.png": "./static/media/shiny.b01f7020.png",
     "static/media/spotify.png": "./static/media/spotify.e895b36f.png",
-    "static/media/sudokuGui.png": "./static/media/sudokuGui.eed24f38.png",
     "static/media/tetris.png": "./static/media/tetris.88384db4.png",
     "static/media/tinder.png": "./static/media/tinder.8c204870.png"
   },
@@ -29,7 +28,7 @@
     "static/js/runtime-main.916853f0.js",
     "static/css/2.11829350.chunk.css",
     "static/js/2.11bab567.chunk.js",
-    "static/css/main.e10cd5b8.chunk.css",
-    "static/js/main.833df155.chunk.js"
+    "static/css/main.0e5a73f6.chunk.css",
+    "static/js/main.b7edab1c.chunk.js"
   ]
 }
