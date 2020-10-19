@@ -8,9 +8,10 @@ export default class ProjectList extends React.Component {
         return (
             <div id="projects" >
                 <h1 id="project-header">My Projects</h1>
+                
+                <div id="first" className="project-row">
 
-                <div className="project-row">
-                    <div class="col">
+                    <div class="col-12 col-md-8">
                         <Project 
                             id="big-card"
                             title="Amazon Web Services Summer Internship" 
@@ -19,9 +20,6 @@ export default class ProjectList extends React.Component {
                             big={true}
                         />
                     </div>
-                </div>
-                
-                <div id="first" className="project-row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                         <Project 
                             id="glimpseApp"
@@ -32,13 +30,23 @@ export default class ProjectList extends React.Component {
                             website="https://www.glimpsewearables.com/"  
                         />
                     </div>
-                    <div class="col-lg col-md-8 col-sm-12 col-12">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                         <Project
                             title="Spotify Jams"
                             description="React app that utlizes the Spotify API to build playlists"
                             image={require("../img/spotify.png")}
                             big={true}
                             git="https://github.com/kelsonflint/spotify-jams"
+                            
+                        />
+                    </div>
+                    <div class="col-lg col-md-4 col-sm-12 col-12">
+                    <Project
+                            title="Expresso API"
+                            description="CRUD API built using Express.js and SQLite"
+                            image={require("../img/expresso.png")}
+                            big={true}
+                            git="https://github.com/kelsonflint/Expresso"
                         />
                     </div>
                     
@@ -71,7 +79,7 @@ export default class ProjectList extends React.Component {
 
                 <h1 id="project-header">Some Extras</h1>
                 <div id="games" className="project-row">
-                    <div class="col-lg col-md-4 col-sm-6 col-12">
+                    <div class="col-lg col-md-6 col-sm-12 col-12">
                         <Project 
                             title="Tetris Remake" 
                             description="My first python project using Pygame" 
@@ -79,7 +87,7 @@ export default class ProjectList extends React.Component {
                             git="https://github.com/kelsonflint/Tetris"
                         />
                     </div>
-                    <div class="col-lg col-md-4 col-sm-6 col-12">
+                    <div class="col-lg col-md-6 col-sm-12 col-12">
                         <Project
                             title="Brick Breaker" 
                             description="A simple Javascript web app" 
