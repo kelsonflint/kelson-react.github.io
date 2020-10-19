@@ -14,11 +14,13 @@ class Navbar extends React.Component {
 		super(props);
 		this.about = React.createRef();
 		this.projects = React.createRef();
-		this.contact = React.createRef();
+        this.contact = React.createRef();
+        
 	}
 
 	componentDidMount() {
-		new WOW.WOW().init();
+        new WOW.WOW().init();
+        window.addEventListener("scroll", this.handleScroll)
 	}
 
 	navEffect() {
@@ -26,6 +28,14 @@ class Navbar extends React.Component {
 			
 		});
     }
+
+    handleScroll = () => {
+        if (window.scrollY > 100) {
+            document.querySelector(".navbar").className = "navbar navbar-expand-md navbar-dark scroll";
+        } else {
+            document.querySelector(".navbar").className = "navbar navbar-expand-md navbar-dark";
+        }
+    };
     
 
 	render() {
@@ -49,11 +59,7 @@ class Navbar extends React.Component {
 								});
 							}}>KelsonFlint.com</a>
 
-                        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-                            <span class="menu-icon-bar"></span>
-                            <span class="menu-icon-bar"></span>
-                            <span class="menu-icon-bar"></span>
-                        </button>
+                        
 
                         <div id="main-nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">

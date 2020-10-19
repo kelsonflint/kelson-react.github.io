@@ -30,6 +30,7 @@ export default class Background extends React.Component {
 				<div id="stars" />
 				<div id="stars2" />
 				<div id="stars3" />
+                
 				<div className="top-container flex">
 					<h1>
 						Kelson Flint
