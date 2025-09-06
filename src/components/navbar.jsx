@@ -46,7 +46,6 @@ class Navbar extends React.Component {
 					ref={this.navEffect}
 					id="my-background"
 					aboutRef={this.about}
-					bounceIn={"wow bounceIn"}
 				/>
                 <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
                     <div class="container">

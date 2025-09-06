@@ -59,8 +59,7 @@ export default class Background extends React.Component {
 						<a href="https://www.linkedin.com/in/kelsonflint/"><i className="fa fa-linkedin"></i></a>
 					</div>
 					<button
-						className={"work-button " + this.props.bounceIn}
-						data-wow-offset="0"
+						className={"work-button"}
 						onClick={() => {
 							let node = document.getElementById("projects");
 							window.scrollTo({
@@ -71,8 +70,7 @@ export default class Background extends React.Component {
 						View my work
 					</button>
 					<button
-						className={"work-button " + this.props.bounceIn}
-						data-wow-offset="0"
+						className={"work-button"}
 						onClick={() => {
 							let node = document.getElementById("about-container");
 							window.scrollTo({
@@ -84,8 +82,7 @@ export default class Background extends React.Component {
 					</button>
 					<button
 						onClick={this.handleSunrise}
-						className={"work-button " + this.props.bounceIn}
-						data-wow-offset="0"
+						className={"work-button"}
 						id="sunriseBtn">Something cool
 					</button>
 				</div>
