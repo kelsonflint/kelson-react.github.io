@@ -15,7 +15,7 @@ class Navbar extends React.Component {
 		this.about = React.createRef();
 		this.projects = React.createRef();
         this.contact = React.createRef();
-        
+
 	}
 
 	componentDidMount() {

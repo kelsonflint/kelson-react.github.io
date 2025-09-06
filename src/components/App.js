@@ -9,6 +9,8 @@ import Navbar from "./navbar";
 import Nav from "./nav";
 import Glimpse from "./pages/glimpse";
 import '../style/App.css';
+import '../style/Sunrise.css';
+
 
 
 
