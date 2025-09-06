@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.263a640e.chunk.css",
-    "main.js": "./static/js/main.13e52899.chunk.js",
-    "main.js.map": "./static/js/main.13e52899.chunk.js.map",
+    "main.css": "./static/css/main.96e34a37.chunk.css",
+    "main.js": "./static/js/main.84d4dc00.chunk.js",
+    "main.js.map": "./static/js/main.84d4dc00.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.916853f0.js",
     "runtime-main.js.map": "./static/js/runtime-main.916853f0.js.map",
-    "static/css/2.11829350.chunk.css": "./static/css/2.11829350.chunk.css",
-    "static/js/2.7a6689bf.chunk.js": "./static/js/2.7a6689bf.chunk.js",
-    "static/js/2.7a6689bf.chunk.js.map": "./static/js/2.7a6689bf.chunk.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "./static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.11bab567.chunk.js": "./static/js/2.11bab567.chunk.js",
+    "static/js/2.11bab567.chunk.js.map": "./static/js/2.11bab567.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.86adb3a418fcdd9c85e8db6dc3543d7f.js": "./precache-manifest.86adb3a418fcdd9c85e8db6dc3543d7f.js",
+    "precache-manifest.88dd4ee25c026b1c4a4c777750d02d82.js": "./precache-manifest.88dd4ee25c026b1c4a4c777750d02d82.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.11829350.chunk.css.map": "./static/css/2.11829350.chunk.css.map",
-    "static/css/main.263a640e.chunk.css.map": "./static/css/main.263a640e.chunk.css.map",
-    "static/js/2.7a6689bf.chunk.js.LICENSE.txt": "./static/js/2.7a6689bf.chunk.js.LICENSE.txt",
+    "static/css/2.d9ad5f5c.chunk.css.map": "./static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.96e34a37.chunk.css.map": "./static/css/main.96e34a37.chunk.css.map",
+    "static/js/2.11bab567.chunk.js.LICENSE.txt": "./static/js/2.11bab567.chunk.js.LICENSE.txt",
     "static/media/brickbreaker.png": "./static/media/brickbreaker.8054d824.png",
     "static/media/App.css": "./static/media/burning-earth.a5afe93a.jpg",
     "static/media/expresso.png": "./static/media/expresso.fd398422.png",
@@ -27,9 +27,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.916853f0.js",
-    "static/css/2.11829350.chunk.css",
-    "static/js/2.7a6689bf.chunk.js",
-    "static/css/main.263a640e.chunk.css",
-    "static/js/main.13e52899.chunk.js"
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.11bab567.chunk.js",
+    "static/css/main.96e34a37.chunk.css",
+    "static/js/main.84d4dc00.chunk.js"
   ]
 }
