@@ -1,0 +1,56 @@
+.blogContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #eaeaea;
+}
+
+.blogHeader {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.blogTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.backLink {
+  display: inline-block;
+  color: #9ae6b4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #68d391;
+}
+
+.blogContent {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #dcdcdc;
+}
+
+.blogContent p {
+  margin-bottom: 1.2rem;
+}
+
+.blogContent h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.blogContent ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+.blogContent li {
+  margin-bottom: 0.5rem;
+}

@@ -1,117 +1,72 @@
-import React from "react"
-import Background from "./background.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import About from "./about.jsx";
-import ProjectList from "./projectList";
-
-
-
-
+import React, { useEffect } from "react";
+import { Link } from 'react-router-dom'
 import WOW from "wowjs";
 
-class Navbar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.about = React.createRef();
-		this.projects = React.createRef();
-        this.contact = React.createRef();
+const Navbar = () => {
+  useEffect(() => {
+    new WOW.WOW().init();
 
-	}
-
-	componentDidMount() {
-        new WOW.WOW().init();
-        window.addEventListener("scroll", this.handleScroll)
-	}
-
-	navEffect() {
-		window.addEventListener("scroll", () => {
-			
-		});
-    }
-
-    handleScroll = () => {
-        if (window.scrollY > 100) {
-            document.querySelector(".navbar").className = "navbar navbar-expand-md navbar-dark scroll";
-        } else {
-            document.querySelector(".navbar").className = "navbar navbar-expand-md navbar-dark";
-        }
+    const handleScroll = () => {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 100) {
+        navbar.classList.add("scroll");
+      } else {
+        navbar.classList.remove("scroll");
+      }
     };
-    
 
-	render() {
-		return (
-            
-			<div>
-				<Background
-					ref={this.navEffect}
-					id="my-background"
-					aboutRef={this.about}
-				/>
-                <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
-                    <div class="container">
-                        <a
-							className="navbar-brand"
-							onClick={() => {
-								window.scrollTo({
-									top: 0,
-									behavior: "smooth"
-								});
-							}}>KelsonFlint.com</a>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-                        
+  return (
+    <nav className="navbar navbar-expand-md navbar-dark">
+      <div className="container">
+        
+        
+        <Link
+            to="/"
+            smooth={true}
+            duration={600}
+            className="navbar-brand"
+            >
+            KelsonFlint.com
+        </Link>
 
-                        <div id="main-nav" class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
-                                <li>
-                                    <a  
-                                        id="navlink"
-                                        onClick={() => {
-                                            let node = document.getElementById("projects");
-                                            window.scrollTo({
-                                                top: node.offsetTop,
-                                                behavior: "smooth"
-                                            });
-                                        }}
-                                        class="btn-style nav-item nav-link">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        id="navlink"
-                                        onClick={() => {
-                                            let node = document.getElementById("about-container");
-                                            window.scrollTo({
-                                                top: node.offsetTop,
-                                                behavior: "smooth"
-                                            });
-                                        }}
-                                        class="btn-style nav-item nav-link">
-                                        About
-								    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <ProjectList 
-                    ref={this.projects}
-                    id="projects"
-                />
-                <About
-                    ref={this.about}
-                    id="about-container"
-                    bounceLeft={"wow bounceInLeft"}
-                    fadeInLeft={"wow fadeInLeft"}
-                    fadeInRight={"wow fadeInRight"}
-                    fadeIn={"wow fadeIn"}
-                    tada={"wow fadeIn"}
-                />
-
-                
-            </div>
-        );
-    }
-}
+        <div className="collapse navbar-collapse" id="main-nav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <button
+                className="btn-style nav-link"
+                onClick={() => {
+                  const node = document.getElementById("life");
+                  if (node) {
+                    window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
+                  }
+                }}
+              >
+                Blog
+              </button>
+            </li>
+            <li className="nav-item">
+              <button
+                className="btn-style nav-link"
+                onClick={() => {
+                  const node = document.getElementById("about-container");
+                  if (node) {
+                    window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
+                  }
+                }}
+              >
+                About
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

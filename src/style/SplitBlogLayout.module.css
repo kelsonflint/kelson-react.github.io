@@ -1,0 +1,100 @@
+.splitContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 16px 40px; /* Top space for navbar */
+  min-height: 100vh;
+  box-sizing: border-box;
+  gap: 32px;
+  font-family: 'Inter', sans-serif;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: #FFF;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.listItem h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #FFF;
+}
+
+.listItem p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertical centering */
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.heroImage,
+.rightColumn > * {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .splitContainer {
+    flex-direction: column; /* stack normally */
+    padding-top: 72px;
+    gap: 16px;
+  }
+
+  .rightColumn {
+    order: -1; /* ensure it's on top */
+    max-height: 50vh;
+  }
+
+  .leftColumn {
+    padding-bottom: 32px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .listItem h2 {
+    font-size: 1.125rem;
+  }
+
+  .listItem p {
+    font-size: 0.95rem;
+  }
+}

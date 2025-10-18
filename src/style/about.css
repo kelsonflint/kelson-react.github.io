@@ -129,6 +129,10 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   	width: 72.5%;
   }
 
+  .sectionContent article {
+	padding-bottom: 5px;
+  }
+
   .sectionTitle h1 {
   	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
   	font-style: italic;
@@ -141,6 +145,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
   	font-size: 1.5em;
   	margin-bottom: -2px;
   }
+
+  .sectionContent ul li {
+	margin-bottom: 5px;
+  }
+  
 
   .subDetails {
   	font-size: 0.8em;
