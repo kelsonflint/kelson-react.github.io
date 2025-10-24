@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.b42583a3.css",
-    "main.js": "/static/js/main.9a13c58b.js",
+    "main.js": "/static/js/main.1af5e5f3.js",
     "static/media/glimpse.png": "/static/media/glimpse.e2bf2eea9d655d55919b.png",
     "static/media/burning-earth.jpg": "/static/media/burning-earth.c1bdd61a30c2d8e52080.jpg",
     "static/media/gon.jpg": "/static/media/gon.21c3638cb4750b0544f5.jpg",
     "index.html": "/index.html",
     "main.b42583a3.css.map": "/static/css/main.b42583a3.css.map",
-    "main.9a13c58b.js.map": "/static/js/main.9a13c58b.js.map"
+    "main.1af5e5f3.js.map": "/static/js/main.1af5e5f3.js.map"
   },
   "entrypoints": [
     "static/css/main.b42583a3.css",
-    "static/js/main.9a13c58b.js"
+    "static/js/main.1af5e5f3.js"
   ]
 }
