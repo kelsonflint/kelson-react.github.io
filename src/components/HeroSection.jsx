@@ -30,6 +30,18 @@ const HeroSection = ({ sunrise, onToggleSunrise }) => {
         <button
           className="work-button"
           onClick={() => {
+            const node = document.getElementById("games");
+            if (node) {
+              window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
+            }
+          }}
+        >
+          Diamond Dawg Games
+        </button>
+
+        <button
+          className="work-button"
+          onClick={() => {
             let node = document.getElementById("life");
             window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
           }}

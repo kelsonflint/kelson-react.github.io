@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import Glimpse from "./components/pages/glimpse";
 import StarryBackground from "./components/StarryBackground";
+import GameCompanySection from "./components/GameCompanySection";
 import LifeAndHobbies from "./components/LifeSection";
 import HeroSection from "./components/HeroSection";
 import About from "./components/AboutMe";
@@ -31,6 +32,7 @@ function App() {
               <StarryBackground>
                 <HeroSection />
               </StarryBackground>
+              <GameCompanySection />
               <LifeAndHobbies />
               <About />
             </>

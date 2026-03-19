@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kelson's Portfolio Website
 
-## Available Scripts
+My personal portfolio site built with React. Live at [kelsonflint.com](https://kelsonflint.com)
 
-In the project directory, you can run:
+## Quick Start (New Computer Setup)
 
-### `yarn start`
+If you're setting this up on a new machine:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Install Node.js** (if not installed):
+   ```bash
+   brew install node
+   ```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### `yarn test`
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   Your site will open at http://localhost:3000 and auto-reload when you make changes.
 
-### `yarn build`
+## Common Tasks
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Making Content Changes
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Most of the content you'll want to update lives in these files:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Main hero section**: `src/components/HeroSection.jsx`
+- **Diamond Dawg Games section**: `src/components/GameCompanySection.jsx`
+- **About me section**: `src/components/AboutMe.jsx`
+- **Life & hobbies section**: `src/components/LifeSection.jsx`
+- **Navigation menu**: `src/components/navbar.jsx`
+- **Blog posts**: `src/components/blogs/`
 
-### `yarn eject`
+### Updating Diamond Dawg Games
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To update your game company section (found at `src/components/GameCompanySection.jsx`):
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Add/edit game information**: Modify the `games` array (lines 5-25)
+2. **Update app store links**: Replace the `#` placeholders with actual App Store/Play Store URLs:
+   ```javascript
+   appStoreLink: "https://apps.apple.com/...",
+   playStoreLink: "https://play.google.com/...",
+   ```
+3. **Change company tagline**: Edit line 34
+4. **Update website link**: Change `https://diamonddawg.games` throughout the file
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Adding a New Blog Post
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Create a new file in `src/components/blogs/YourBlogName.jsx`
+2. Copy the structure from an existing blog like `Anime.jsx` or `Travel.jsx`
+3. Add a route in `src/App.js` (around line 41-46):
+   ```javascript
+   <Route path="/blog/your-topic" element={<YourBlogName />} />
+   ```
+4. Add a card in `src/components/LifeSection.jsx` to link to it
 
-## Learn More
+### Deploying to GitHub Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After making changes and committing them:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run deploy
+```
 
-### Code Splitting
+This builds the site and pushes it to the `gh-pages` branch, updating your live site at kelsonflint.com.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Testing Before Deploying
 
-### Analyzing the Bundle Size
+Always test locally first:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. Save your changes
+2. Check http://localhost:3000 in your browser
+3. Make sure everything looks good
+4. Then run `npm run deploy`
 
-### Making a Progressive Web App
+## File Structure
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```
+src/
+├── components/
+│   ├── HeroSection.jsx       # Main landing section
+│   ├── AboutMe.jsx           # About section
+│   ├── LifeSection.jsx       # Hobby cards grid
+│   ├── navbar.jsx            # Navigation bar
+│   ├── StarryBackground.jsx  # Animated background
+│   └── blogs/                # All blog post components
+├── style/                    # CSS files
+├── App.js                    # Main app routes
+└── index.js                  # Entry point
+```
 
-### Advanced Configuration
+## Troubleshooting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+**Site won't start?**
+- Make sure you ran `npm install` first
+- Try deleting `node_modules` and running `npm install` again
 
-### Deployment
+**Changes not showing?**
+- Check your browser - it should auto-reload
+- If not, refresh the page manually
+- Make sure `npm start` is still running
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+**Deploy not working?**
+- Make sure you committed your changes to git first
+- Check that you have push access to the repository
 
-### `yarn build` fails to minify
+## Notes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Built with Create React App
+- Uses React Router for page navigation
+- Deployed via GitHub Pages
+- CSS uses a mix of custom styles and Bootstrap

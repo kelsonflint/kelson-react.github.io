@@ -1,0 +1,315 @@
+.gameSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a3e 0%, #0f0f1e 100%);
+  color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.gameSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(79, 209, 197, 0.1), transparent 50%);
+  pointer-events: none;
+}
+
+.gameContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.companyHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.companyLogo {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 20px rgba(79, 209, 197, 0.8))
+          drop-shadow(0 0 40px rgba(79, 209, 197, 0.4))
+          drop-shadow(0 0 60px rgba(99, 247, 224, 0.3));
+  transition: all 0.3s ease;
+}
+
+.logoLeft {
+  animation: neonPulseLeft 3s ease-in-out infinite;
+}
+
+.logoRight {
+  animation: neonPulseRight 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes neonPulseLeft {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(79, 209, 197, 0.8))
+            drop-shadow(0 0 40px rgba(79, 209, 197, 0.4))
+            drop-shadow(0 0 60px rgba(99, 247, 224, 0.3));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(79, 209, 197, 1))
+            drop-shadow(0 0 60px rgba(79, 209, 197, 0.6))
+            drop-shadow(0 0 80px rgba(99, 247, 224, 0.5))
+            drop-shadow(0 0 100px rgba(99, 247, 224, 0.3));
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+@keyframes neonPulseRight {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(99, 247, 224, 0.8))
+            drop-shadow(0 0 40px rgba(99, 247, 224, 0.4))
+            drop-shadow(0 0 60px rgba(79, 209, 197, 0.3));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(99, 247, 224, 1))
+            drop-shadow(0 0 60px rgba(99, 247, 224, 0.6))
+            drop-shadow(0 0 80px rgba(79, 209, 197, 0.5))
+            drop-shadow(0 0 100px rgba(79, 209, 197, 0.3));
+    transform: scale(1.1) rotate(-5deg);
+  }
+}
+
+.companyLogo:hover {
+  animation-play-state: paused;
+  transform: scale(1.15) rotate(10deg) !important;
+  filter: drop-shadow(0 0 40px rgba(79, 209, 197, 1))
+          drop-shadow(0 0 80px rgba(79, 209, 197, 0.8))
+          drop-shadow(0 0 120px rgba(99, 247, 224, 0.6)) !important;
+}
+
+.companyTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4fd1c5 0%, #63f7e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+.companyTagline {
+  font-size: 1.3rem;
+  color: #b8b8b8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.visitLink {
+  display: inline-block;
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #4fd1c5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.visitLink:hover {
+  background: #4fd1c5;
+  color: #0f0f1e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 209, 197, 0.3);
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.gameCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.gameCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(79, 209, 197, 0.1), rgba(99, 247, 224, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gameCard:hover::before {
+  opacity: 1;
+}
+
+.gameCard:hover {
+  transform: translateY(-12px);
+  border-color: rgba(79, 209, 197, 0.4);
+  box-shadow: 0 12px 32px rgba(79, 209, 197, 0.2);
+}
+
+.gameEmoji {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.gameImage {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  filter: drop-shadow(0 4px 16px rgba(79, 209, 197, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gameCard:hover .gameImage {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 24px rgba(79, 209, 197, 0.5));
+}
+
+.gameTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.gameTagline {
+  font-size: 1rem;
+  color: #4fd1c5;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.gameDesc {
+  font-size: 1rem;
+  color: #b8b8b8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.appStoreBadges {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.storeBadge {
+  display: block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.storeBadge:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.badgeImage {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.learnMore {
+  font-weight: 600;
+  color: #4fd1c5;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.learnMore:hover {
+  color: #63f7e0;
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .gameSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .logoContainer {
+    gap: 1rem;
+  }
+
+  .companyLogo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .companyTitle {
+    font-size: 2.2rem;
+  }
+
+  .companyTagline {
+    font-size: 1.1rem;
+  }
+
+  .gamesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gameCard {
+    padding: 2rem;
+  }
+
+  .appStoreBadges {
+    justify-content: center;
+  }
+
+  .badgeImage {
+    height: 45px;
+  }
+}
