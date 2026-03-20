@@ -28,11 +28,15 @@ export default class StarryBackground extends React.Component {
         <div className={`day-overlay ${sunrise ? "sunrise" : ""}`} />
 
         {/* Pass sunrise state + toggle handler to children (like HeroSection) */}
-        {this.props.children &&
-          React.cloneElement(this.props.children, {
-            sunrise,
-            onToggleSunrise: this.handleSunrise,
-          })}
+        {React.Children.map(this.props.children, (child) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+              sunrise,
+              onToggleSunrise: this.handleSunrise,
+            });
+          }
+          return child;
+        })}
       </div>
     );
   }

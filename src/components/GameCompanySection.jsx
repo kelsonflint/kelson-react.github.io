@@ -29,33 +29,6 @@ const GameCompanySection = () => {
   return (
     <section id="games" className={styles.gameSection}>
       <div className={styles.gameContainer}>
-        <div className={`${styles.companyHeader} wow fadeInUp`}>
-          <h2 className={styles.companyTitle}>Diamond Dawg Games</h2>
-          <p className={styles.companyTagline}>
-            Indie games that bring people together
-          </p>
-          <div className={styles.logoContainer}>
-            <img
-              src="/DDSC_Icon1.svg"
-              alt="Diamond Dawg Games Logo"
-              className={`${styles.companyLogo} ${styles.logoLeft}`}
-            />
-            <img
-              src="/DDSC_Icon1.svg"
-              alt="Diamond Dawg Games Logo"
-              className={`${styles.companyLogo} ${styles.logoRight}`}
-            />
-          </div>
-          <a
-            href="https://diamonddawg.games"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.visitLink}
-          >
-            Visit diamonddawg.games →
-          </a>
-        </div>
-
         <div className={styles.gamesGrid}>
           {games.map((game, index) => (
             <div
@@ -123,6 +96,33 @@ const GameCompanySection = () => {
               </a>
             </div>
           ))}
+        </div>
+
+        <div className={`${styles.companyHeader} wow fadeInUp`}>
+          <h2 className={styles.companyTitle}>Diamond Dawg Games</h2>
+          <p className={styles.companyTagline}>
+            Indie games that bring people together
+          </p>
+          <div className={styles.logoContainer}>
+            <img
+              src="/DDSC_Icon1.svg"
+              alt="Diamond Dawg Games Logo"
+              className={`${styles.companyLogo} ${styles.logoLeft}`}
+            />
+            <img
+              src="/DDSC_Icon1.svg"
+              alt="Diamond Dawg Games Logo"
+              className={`${styles.companyLogo} ${styles.logoRight}`}
+            />
+          </div>
+          <a
+            href="https://diamonddawg.games"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.visitLink}
+          >
+            Visit diamonddawg.games →
+          </a>
         </div>
       </div>
     </section>

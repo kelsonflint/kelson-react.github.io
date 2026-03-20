@@ -17,6 +17,8 @@ import Books from "./components/blogs/Books";
 import Movies from "./components/blogs/Movies";
 import Anime from "./components/blogs/Anime";
 import Placeholder from "./components/blogs/Placeholder";
+import Resume from "./components/pages/Resume";
+import Blogs from "./components/pages/Blogs";
 
 function App() {
   return (
@@ -31,10 +33,8 @@ function App() {
             <>
               <StarryBackground>
                 <HeroSection />
+                <GameCompanySection />
               </StarryBackground>
-              <GameCompanySection />
-              <LifeAndHobbies />
-              <About />
             </>
           }
         />
@@ -46,6 +46,12 @@ function App() {
         <Route path="/blog/books" element={<Placeholder title="Books That Changed Me" emoji="📚" />} />
         <Route path="/blog/movies" element={<Placeholder title="Movies" emoji="📽️" />} />
         <Route path="/blog/anime" element={<Anime />} />
+
+        {/* Resume Page */}
+        <Route path="/resume" element={<Resume />} />
+
+        {/* Blogs Page */}
+        <Route path="/blogs" element={<Blogs />} />
 
         {/* ✨ Glimpse (Personal feed, photography, etc.)
         <Route

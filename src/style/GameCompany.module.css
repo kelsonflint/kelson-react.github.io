@@ -1,20 +1,9 @@
 .gameSection {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #1a1a3e 0%, #0f0f1e 100%);
+  background: transparent;
   color: #f5f5f5;
   position: relative;
-  overflow: hidden;
-}
-
-.gameSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 70% 30%, rgba(79, 209, 197, 0.1), transparent 50%);
-  pointer-events: none;
+  overflow: visible;
 }
 
 .gameContainer {
@@ -27,6 +16,7 @@
 .companyHeader {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .logoContainer {
@@ -98,12 +88,13 @@
 .companyTitle {
   font-size: 3rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
   background: linear-gradient(135deg, #4fd1c5 0%, #63f7e0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: 1px;
+  letter-spacing: 10px;
 }
 
 .companyTagline {
@@ -138,15 +129,16 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .gameCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(79, 209, 197, 0.15);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 3.5rem;
   transition: all 0.4s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -173,8 +165,9 @@
 
 .gameCard:hover {
   transform: translateY(-12px);
-  border-color: rgba(79, 209, 197, 0.4);
-  box-shadow: 0 12px 32px rgba(79, 209, 197, 0.2);
+  border-color: rgba(79, 209, 197, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 32px rgba(79, 209, 197, 0.3);
 }
 
 .gameEmoji {
@@ -299,10 +292,11 @@
   .gamesGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1.5rem;
   }
 
   .gameCard {
-    padding: 2rem;
+    padding: 2.5rem;
   }
 
   .appStoreBadges {

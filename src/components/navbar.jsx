@@ -1,9 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import WOW from "wowjs";
+import '../style/navbar.css';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     new WOW.WOW().init();
 
@@ -20,47 +23,60 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-md navbar-dark">
       <div className="container">
-        
-        
-        <Link
-            to="/"
-            smooth={true}
-            duration={600}
-            className="navbar-brand"
-            >
-            KelsonFlint.com
+        <Link to="/" className="navbar-brand navbar-brand-mobile">
+          KelsonFlint.com
         </Link>
 
-        <div className="collapse navbar-collapse" id="main-nav">
+        <button
+          className={`navbar-toggler ${menuOpen ? '' : 'collapsed'}`}
+          type="button"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="menu-icon-bar"></span>
+          <span className="menu-icon-bar"></span>
+          <span className="menu-icon-bar"></span>
+        </button>
+
+        <div className={`navbar-collapse ${menuOpen ? 'show' : 'collapse'}`} id="main-nav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <button
-                className="btn-style nav-link"
-                onClick={() => {
-                  const node = document.getElementById("life");
-                  if (node) {
-                    window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
-                  }
-                }}
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={closeMenu}
               >
-                Blog
-              </button>
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <button
-                className="btn-style nav-link"
-                onClick={() => {
-                  const node = document.getElementById("about-container");
-                  if (node) {
-                    window.scrollTo({ top: node.offsetTop, behavior: "smooth" });
-                  }
-                }}
+              <Link
+                to="/blogs"
+                className="nav-link"
+                onClick={closeMenu}
               >
-                About
-              </button>
+                Blogs
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/resume"
+                className="nav-link"
+                onClick={closeMenu}
+              >
+                Resume
+              </Link>
             </li>
           </ul>
         </div>
