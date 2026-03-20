@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.34b11840.css",
-    "main.js": "/static/js/main.785a0448.js",
+    "main.css": "/static/css/main.bbab056f.css",
+    "main.js": "/static/js/main.4e6bfa9e.js",
     "static/media/glimpse.png": "/static/media/glimpse.e2bf2eea9d655d55919b.png",
-    "static/media/will.jpg": "/static/media/will.96da98c399dae2b072da.jpg",
-    "static/media/interstellar.jpg": "/static/media/interstellar.ca5fb3238848ad7c2187.jpg",
-    "static/media/bill.jpg": "/static/media/bill.0bdad7334904582eeb3c.jpg",
-    "static/media/spider.jpg": "/static/media/spider.8ab1259ddee039aa6bb6.jpg",
-    "static/media/scott.jpg": "/static/media/scott.13a0fc28aa6c0cebeb3d.jpg",
-    "static/media/ted.jpg": "/static/media/ted.0333013ce9e9240bc499.jpg",
     "static/media/burning-earth.jpg": "/static/media/burning-earth.c1bdd61a30c2d8e52080.jpg",
     "static/media/gon.jpg": "/static/media/gon.21c3638cb4750b0544f5.jpg",
     "index.html": "/index.html",
-    "main.34b11840.css.map": "/static/css/main.34b11840.css.map",
-    "main.785a0448.js.map": "/static/js/main.785a0448.js.map"
+    "main.bbab056f.css.map": "/static/css/main.bbab056f.css.map",
+    "main.4e6bfa9e.js.map": "/static/js/main.4e6bfa9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.34b11840.css",
-    "static/js/main.785a0448.js"
+    "static/css/main.bbab056f.css",
+    "static/js/main.4e6bfa9e.js"
   ]
 }
