@@ -297,6 +297,8 @@
 
   .gameCard {
     padding: 2.5rem;
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .appStoreBadges {
