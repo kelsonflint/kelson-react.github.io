@@ -8,7 +8,11 @@ export default class StarryBackground extends React.Component {
   }
 
   componentDidMount() {
-    new WOW.WOW().init();
+    // Only initialize WOW.js on desktop for better mobile performance
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    if (!isMobile) {
+      new WOW.WOW().init();
+    }
   }
 
   handleSunrise = () => {

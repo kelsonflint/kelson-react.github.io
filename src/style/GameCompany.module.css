@@ -279,6 +279,9 @@
   .companyLogo {
     width: 70px;
     height: 70px;
+    /* Disable expensive animations on mobile */
+    animation: none !important;
+    filter: none !important;
   }
 
   .companyTitle {
@@ -299,6 +302,17 @@
     padding: 2.5rem;
     backdrop-filter: none;
     background: rgba(255, 255, 255, 0.05);
+  }
+
+  .gameCard:hover {
+    /* Disable expensive hover effects on mobile */
+    transform: none;
+    box-shadow: none;
+  }
+
+  .gameImage {
+    /* Simplify drop-shadows on mobile */
+    filter: none !important;
   }
 
   .appStoreBadges {

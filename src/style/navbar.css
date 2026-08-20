@@ -44,6 +44,17 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar.navbar-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .navbar-brand-mobile {
     display: block;
     font-size: 1rem !important;

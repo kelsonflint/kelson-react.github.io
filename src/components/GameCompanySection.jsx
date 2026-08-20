@@ -22,7 +22,7 @@ const games = [
     image: "/arrowfall_icon.png",
     imageWebP: "/arrowfall_icon.webp",
     featured: true,
-    appStoreLink: "#", // Not yet available on iOS
+    appStoreLink: "https://apps.apple.com/us/app/arrowfall-the-fractured-lands/id6759588671",
     playStoreLink: "https://play.google.com/store/apps/details?id=com.kelson.towers&pcampaignid=web_share",
   },
 ];

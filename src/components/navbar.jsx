@@ -6,16 +6,21 @@ import '../style/navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     new WOW.WOW().init();
 
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 100) {
+      const scrolled = window.scrollY > 100;
+
+      if (scrolled) {
         navbar.classList.add("scroll");
+        setHasScrolled(true);
       } else {
         navbar.classList.remove("scroll");
+        setHasScrolled(false);
       }
     };
 
@@ -32,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark">
+    <nav className={`navbar navbar-expand-md navbar-dark ${hasScrolled ? 'navbar-visible' : ''}`}>
       <div className="container">
         <Link to="/" className="navbar-brand navbar-brand-mobile">
           KelsonFlint.com
